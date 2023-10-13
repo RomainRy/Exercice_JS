@@ -59,6 +59,7 @@ class Personnage {
       } else {
         amorcerSpike = Math.random() <= 0.4
       }
+      
   
       let messageEquipe
       if (premiereEquipe === this.attaquants) {
@@ -68,7 +69,11 @@ class Personnage {
       }
   
       console.log(messageEquipe + ":" + personnageAleatoire.nom + " tue son adversaire " + adversaireAleatoire.nom)
-  
+      
+      if (amorcerSpike) {
+        console.log("Spike posé !")
+      }
+
       while (true) {
         let gagnant = personnageAleatoire.duel(adversaireAleatoire, amorcerSpike)
         if (gagnant === personnageAleatoire) {
